@@ -2,14 +2,14 @@ site_name: ExpressLRS
 site_url: https://www.expresslrs.org/
 site_author: ExpressLRS
 site_description: >-
-  ExpressLRS aims to provide the best completely open, high refresh radio
-  control link while maintaining a maximum achievable range at that rate with
-  low latency. Vast support of hardware in both 900 Mhz and 2.4 GHz frequencies.
+  ExpressLRS는 최장의 통신 거리, 최저의 지연시간, 가장 빠른 갱신율의 라디오(RC) 링크를 
+  지향하는 하는 오픈소스 프로젝트입니다. 다양한 900Mhz와 2.4Ghz 하드웨어를 지원합니다.
 
 # Repository
 repo_name: ExpressLRS/ExpressLRS
 repo_url: https://github.com/ExpressLRS/ExpressLRS/releases/
-edit_uri: "https://github.com/ExpressLRS/Docs/tree/master/docs"
+edit_uri: "https://github.com/SunjunKim/Docs/tree/korean/docs"
+
 
 # Copyright
 copyright: Copyright &copy; 2021 Team ExpressLRS
@@ -107,13 +107,13 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
-  - Quick Start:
-      - Getting Started: quick-start/getting-started.md
-      - Installing Configurator: quick-start/installing-configurator.md
-      - Firmware Options: quick-start/firmware-options.md
-      - TX Modules:
-          - Preparing your Radio: quick-start/tx-prep.md
+  - 홈: index.md
+  - 뻐른 시작:
+      - 시작하기: quick-start/getting-started.md
+      - Configurator 설치하기: quick-start/installing-configurator.md
+      - 펌웨어 옵션: quick-start/firmware-options.md
+      - 송신기(TX) 모듈:
+          - 조종기 준비하기: quick-start/tx-prep.md
           - Flashing TX Modules:
             - Flashing Frsky R9 Modules: quick-start/tx-r9m.md
             - Flashing Happymodel ES900TX: quick-start/tx-es900tx.md
@@ -148,7 +148,7 @@ nav:
         - Binding ExpressLRS: quick-start/binding.md
         - Pre-first Flight Checks: quick-start/pre-1stflight.md
       - Troubleshooting: quick-start/troubleshooting.md
-  - Software:
+  - 소프트웨어:
       - Switch Configs: software/switch-config.md
       - User Defines: software/user-defines.md
       - Obsolete Defines: software/obsolete-defines.md
@@ -158,7 +158,7 @@ nav:
       - Updating: 
         - Betaflight Passthrough: software/updating/betaflight-passthrough.md
         - Wifi Updating: software/updating/wifi-updating.md
-  - Hardware:
+  - 하드웨어:
       - Navigation Guide: hardware/supported-hardware.md
       - R9M Inverter Mod: hardware/inverter-mod.md
       - R9M Fan Mod: hardware/fan-mod.md
@@ -167,7 +167,7 @@ nav:
       - SMD Antenna: hardware/smd-antenna.md
       - DIY Receiver: hardware/diy-rx.md
       - DIY Transmitter: hardware/diy-tx.md
-  - Info:
+  - 정보:
       - Glossary: info/glossary.md
       - Signal Health: info/signal-health.md
       - Telemetry Bandwith: info/telem-bandwidth.md
