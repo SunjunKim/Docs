@@ -35,6 +35,7 @@ Targets:
 
 ### via USB/UART
 
+#### Happymodel TX modules
 For the Happymodel TX modules, connect it via USB to your computer. As stated above, module should be detected as a `USB to UART Bridge` and the jumper/dipswitches are set in the correct position (middle pins/switches should be On).
 
 On the ExpressLRS Configurator, select your Target and elect your binding phrase which will be used to bind the Backpacks together. It can be different from your usual binding phrase, but there's no issue if you want to use the same. You can also set the Home Network SSID and Password (version 0.2.0).
@@ -50,6 +51,16 @@ If you did things right, `Success` message should appear.
 Unplug the USB and change the position of the jumpers/dipswitches for the `Normal Operation` (refer back to the module's Flashing Guide page for the correct position).
 
 Put back the cover of the module and attach it into your module bay.
+
+#### NamimnoRC OLED-equipped TX Modules
+In case you accidentally bricked the stock backpack firmware, you need to reflash it through UART. Unfortunately, there are no jumper or dipswitches like Happymodel modules to access the backpack MCU through the onboard USB port. You need to wire an FTDI module (or some equivalent USB-Serial module) to tiny pads on the module PCB. Follow the steps below to unbrick it.
+
+1. Detach the module from the radio. Unplug the USB cable if attached.
+2. Unscrew the four screws at the rear and open the TX module. At the right bottom side, you'll be able to find five pads labeled as **G-B-3-T-R**: GND, Boot, 3v3, TX, and RX respectively. 
+3. Use a 3.3v FTDI board, or set it to use 3.3v if possible. Connect GND, VCC, RX, TX pins of the FTDI module to the G, 3, T, R pads on the board.
+4. Power up the FTDI module while pressing the **BOOT2* button nearby the G-B-3-T-R pads.
+5. In ExpressLRS Configurator, select `Backpack` tab, choose the desired version, set the target to `TX`, `HappyModel TX Backpack`. **WARNING: DO NOT SELECT Namimno TX Backpack target. It's only for NamimnoRC v1 modules without OLED**. Choose `UART` as a flashing method. Set other options as you like.
+6. Now you'll be able to flash the backpack MCU through UART by pressing **Build and Flash** button on the ExpressLRS Configurator.
 
 ### via WiFi (ESP-based TX Modules)
 
